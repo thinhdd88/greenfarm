@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <adminhtml_flexibleblog_post_index>
+        <reference name="content">
+            <block type="flexibleblog/adminhtml_post" name="post" />
+        </reference>
+    </adminhtml_flexibleblog_post_index>
+
+    <adminhtml_flexibleblog_post_edit>
+        <update handle="editor"/>
+    </adminhtml_flexibleblog_post_edit>
+
+    <adminhtml_flexibleblog_category_index>
+        <reference name="content">
+            <block type="flexibleblog/adminhtml_category" name="category" />
+        </reference>
+    </adminhtml_flexibleblog_category_index>
+
+    <adminhtml_flexibleblog_category_edit>
+        <update handle="editor"/>
+    </adminhtml_flexibleblog_category_edit>
+
+    <adminhtml_flexibleblog_tag_index>
+        <reference name="content">
+            <block type="flexibleblog/adminhtml_tag" name="tag" />
+        </reference>
+    </adminhtml_flexibleblog_tag_index>
+
+    <adminhtml_flexibleblog_author_index>
+        <reference name="content">
+            <block type="flexibleblog/adminhtml_author" name="author" />
+        </reference>
+    </adminhtml_flexibleblog_author_index>
+
+    <adminhtml_flexibleblog_author_edit>
+        <update handle="editor"/>
+    </adminhtml_flexibleblog_author_edit>
+
+    <adminhtml_flexibleblog_comment_index>
+        <reference name="content">
+            <block type="flexibleblog/adminhtml_comment" name="comment" />
+        </reference>
+    </adminhtml_flexibleblog_comment_index>
+</layout>

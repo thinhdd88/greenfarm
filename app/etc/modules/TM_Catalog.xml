@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <TM_Catalog>
+      <active>true</active>
+      <codePool>local</codePool>
+    </TM_Catalog>
+  </modules>
+</config>

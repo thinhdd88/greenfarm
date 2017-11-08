@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <TM_Catalog>
+            <version>0.1.0</version>
+        </TM_Catalog>
+    </modules>
+    <global>
+        <blocks>
+            <tm_catalog>
+                <class>TM_Catalog_Block</class>
+            </tm_catalog>
+            <catalog><!-- alias of the block group you are rewriting -->
+                <rewrite><!-- reserved tag: specify that you are rewriting something -->
+                    <product_list>TM_Catalog_Block_Product_List</product_list> <!-- tag: the rest of the alias of the class you are rewriting. value: the name of your class that rewrites the core class -->
+                </rewrite>
+            </catalog>
+        </blocks>
+        <helpers>
+            <tm_catalog>
+                <class>TM_Catalog_Helper</class>
+            </tm_catalog>
+        </helpers>
+        <models>
+            <tm_catalog>
+                <class>TM_Catalog_Model</class>
+                <resourceModel>tm_catalog_resource</resourceModel>
+            </tm_catalog>
+            <tm_catalog_resource>
+                <class>TM_Catalog_Model_Resource</class>
+            </tm_catalog_resource>
+            <catalog>
+                <rewrite>
+                    <config>TM_Catalog_Model_Config</config>
+                </rewrite>
+            </catalog>
+        </models>
+        <resources>
+            <tm_catalog_setup>
+                <setup>
+                    <module>TM_Catalog</module>
+                </setup>
+            </tm_catalog_setup>
+        </resources>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <tm_catalog>
+                    <file>tm_catalog.xml</file>
+                </tm_catalog>
+            </updates>
+        </layout>
+
+        <routers>
+            <tm_catalog>
+                <use>standard</use>
+                <args>
+                    <module>TM_Catalog</module>
+                    <frontName>tm_catalog</frontName>
+                </args>
+            </tm_catalog>
+        </routers>
+
+    </frontend>
+    <default>
+        <catalog>
+            <frontend>
+                <default_direction>DESC</default_direction>
+            </frontend>
+        </catalog>
+    </default>
+</config>

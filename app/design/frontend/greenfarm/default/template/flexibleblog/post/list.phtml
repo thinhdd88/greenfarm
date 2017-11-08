@@ -1,0 +1,45 @@
+<?php $postsCollection = $this->getCollection(); ?>cacacsac
+<?php if (!$postsCollection->count()): ?>
+    <div class="note-msg"><?php echo Mage::helper('flexibleblog')->__('There are no posts matching the selection.'); ?></div>
+<?php else: ?>
+    <div class="row">
+        <?php //To retrive post list
+        $i = 1;
+        foreach($postsCollection as $post):?>
+            <div class="col-xs-12 col-sm-4">
+                <div class="blog post-content">
+                    <?php //To retrive post featured image
+                    $postImage = $this->getPostThumb($post->getPostId());
+                    if($postImage): ?>
+                        <div class="post-image">
+                            <figure><a href="<?php echo $this->getPostUrl($post->getPostUrlKey()); ?>"><?php echo $this->getPostThumb($post->getPostId()); ?></a></figure>
+                        </div>
+                    <?php endif; ?>
+                    <div class="post-text">
+                        <div class="page-title post-title">
+                            <h2><?php echo $post->getPostTitle(); ?></h2>
+                        </div>
+                        <div class="post-summary">
+                            <?php echo $this->getPostExcerpt($post->getPostId()); ?>
+                            <div class="read-more"><a href="<?php echo $this->getPostUrl($post->getPostUrlKey()); ?>" class="cms-button button-gradient button-red"><?php echo $this->__('Read More'); ?></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php if($i%3 == 0) echo '</div><div class="row">'; ?>
+        <?php $i++;  endforeach;
+        //To retive disquesScript if disqus comment enable from blog configation settings
+        echo $this->getDisqusScript(); ?>
+    </div>
+<?php endif; ?>
+
+<script>
+    var $jq = jQuery;
+    $jq(document).ready(function(){
+        var title = $jq('.flexibleblog-index-index .page-title.category-title').html();
+        var sidebar = "<div class='col-left sidebar'>" + $jq('.flexibleblog-index-index .container .main .sidebar').html() + "</div>";
+        $jq('.flexibleblog-index-index .container.col2-left-layout').prepend('<div class="page-title category-title">' + title + '</div>');
+        $jq('.flexibleblog-index-index .container .main').prepend(sidebar);
+        $jq('.flexibleblog-index-index .container .main .col-main + .sidebar').hide();
+    });
+</script>

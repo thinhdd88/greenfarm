@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <flexibleblog module="flexibleblog">
+            <title>Blog</title>
+            <sort_order>80</sort_order>
+            <children>
+                <posts module="flexibleblog">
+                    <title>Posts</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/flexibleblog_post</action>
+                </posts>
+                <categories module="flexibleblog">
+                    <title>Categories</title>
+                    <sort_order>20</sort_order>
+                    <action>adminhtml/flexibleblog_category</action>
+                </categories>
+                <tags module="flexibleblog">
+                    <title>Tags</title>
+                    <sort_order>30</sort_order>
+                    <action>adminhtml/flexibleblog_tag</action>
+                </tags>
+                <author module="flexibleblog">
+                    <title>Author</title>
+                    <sort_order>40</sort_order>
+                    <action>adminhtml/flexibleblog_author</action>
+                </author>
+                <comments module="flexibleblog">
+                    <title>Comments</title>
+                    <sort_order>50</sort_order>
+                    <action>adminhtml/flexibleblog_comment</action>
+                </comments>
+                <import module="flexibleblog">
+                    <title>Import</title>
+                    <sort_order>60</sort_order>
+                    <action>adminhtml/flexibleblog_import</action>
+                </import>
+                <export module="flexibleblog">
+                    <title>Export</title>
+                    <sort_order>70</sort_order>
+                    <action>adminhtml/flexibleblog_export</action>
+                </export>
+                <general module="flexibleblog">
+                    <title>Blog Configuration</title>
+                    <sort_order>80</sort_order>
+                    <action>adminhtml/system_config/edit/section/flexibleblog_options</action>
+                </general>
+            </children>
+        </flexibleblog>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <flexibleblog module="flexibleblog">
+                        <title>Blog</title>
+                        <sort_order>80</sort_order>
+                        <children>
+                            <posts module="flexibleblog">
+                                <title>Posts</title>
+                                <sort_order>10</sort_order>
+                                <action>adminhtml/flexibleblog_post</action>
+                            </posts>
+                            <categories module="flexibleblog">
+                                <title>Categories</title>
+                                <sort_order>20</sort_order>
+                                <action>adminhtml/flexibleblog_category</action>
+                            </categories>
+                            <tags module="flexibleblog">
+                                <title>Tags</title>
+                                <sort_order>30</sort_order>
+                                <action>adminhtml/flexibleblog_tag</action>
+                            </tags>
+                            <author module="flexibleblog">
+                                <title>Author</title>
+                                <sort_order>40</sort_order>
+                                <action>adminhtml/flexibleblog_author</action>
+                            </author>
+                            <comments module="flexibleblog">
+                                <title>Comments</title>
+                                <sort_order>50</sort_order>
+                                <action>adminhtml/flexibleblog_comment</action>
+                            </comments>
+                            <import module="flexibleblog">
+                                <title>Import</title>
+                                <sort_order>60</sort_order>
+                                <action>adminhtml/flexibleblog_import</action>
+                            </import>
+                            <export module="flexibleblog">
+                                <title>Export</title>
+                                <sort_order>70</sort_order>
+                                <action>adminhtml/flexibleblog_export</action>
+                            </export>
+                            <general module="flexibleblog">
+                                <title>Blog Configuration</title>
+                                <sort_order>80</sort_order>
+                                <action>adminhtml/system_config/edit/section/flexibleblog_options</action>
+                            </general>
+                        </children>
+                    </flexibleblog>
+                </children>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <flexibleblog_options>
+                                        <title>Pixlogix Blog Configuration Section</title>
+                                    </flexibleblog_options>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

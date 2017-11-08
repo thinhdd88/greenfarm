@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Pixlogix_Flexibleblog>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Pixlogix_Flexibleblog>
+    </modules>
+</config>

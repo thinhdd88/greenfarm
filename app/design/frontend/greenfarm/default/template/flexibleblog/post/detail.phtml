@@ -1,0 +1,66 @@
+<?php $postData = $this->getPostData(); ?>
+<?php $previousPost = $this->getPreviousPost($postData->getId()); ?>
+<?php $nextPost = $this->getNextPost($postData->getId()); ?>
+<div class="post post-content-detail">
+    <div class="parallax"
+         style="background-image: url('<?php if ($this->getImage($postData->getPostId())) echo $this->getImage($postData->getPostId()); ?>')">
+        <div class="single-post-header-overlay"></div>
+        <div class="parallax-content">
+            <div class="page-title">
+                <h1><?php echo $postData->getPostTitle(); ?></h1>
+            </div>
+            <div class="post-infos">
+                <div class="info post-author"><?php echo $this->__('by '); ?><a
+                        href="<?php echo $this->getAuthorUrl($postData->getPostAuthor()); ?>"><?php echo $this->getAuthorName($postData->getPostAuthor()); ?></a> </div>
+                <div class="info post-date"><?php echo $this->__('on '); ?> <?php echo Mage::helper('core')->formatDate($postData->getPostPublishDate(), 'medium', false); ?></div>
+                <div class="info post-cats">
+                    <?php echo $this->__('in: '); ?>
+                    <ul class="post-categories">
+                        <?php echo $this->getPostCategoryList($postData->getPostCategories()); ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="blog-description">
+            <?php echo Mage::helper('cms')->getBlockTemplateProcessor()->filter($postData->getPostDescription()); ?>
+        </div>
+
+        <?php $tagList = $this->getPostTagList($postData->getPostTags());
+        if ($tagList): ?>
+            <ul class="post-tags">
+                <?php echo $tagList; ?>
+            </ul>
+        <?php endif; ?>
+
+        <div class="clearfix nav-bar">
+            <div class="pull-left nav-previous">
+                <a href="<?= $this->getPostUrl($previousPost->getPostUrlKey()); ?>"><?php echo $this->__('Previous Reading'); ?></a>
+            </div>
+            <div class="pull-right nav-next">
+                <a href="<?= $this->getPostUrl($previousPost->getNextUrlKey()); ?>"><?php echo $this->__('Next Reading'); ?></a>
+            </div>
+        </div>
+    </div>
+
+
+    <?php if ($this->socialSharing($postData->getPostId())): ?>
+        <div class="social-icon">
+            <?php echo $this->socialSharing($postData->getPostId()); ?>
+        </div>
+    <?php endif;
+    echo $this->getAuthor($postData->getPostAuthor()); ?>
+</div>
+
+<script>
+    (function($) {
+        $(function() {
+            $(window).scroll(function(){
+                $(window).width() > 1024 && $(".single-post-header-overlay").css("opacity", .1 + $(window).scrollTop() / (1.4 * $(window).height()));
+            })
+        });
+    })(jQuery);
+
+</script>

@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Pixlogix Flexibleblog
+*
+* Module System Configuration
+*
+* @category   Pixlogix
+* @package    Pixlogix_Flexibleblog
+* @author     Pixlogix Team <support@pixlogix.com>
+*
+*/
+-->
+<config>
+    <tabs>
+        <flexibleblog translate="label" module="flexibleblog">
+            <label>Pixlogix Blog</label>
+            <sort_order>1</sort_order>
+        </flexibleblog>
+    </tabs>
+    <sections>
+        <flexibleblog_options translate="label" module="flexibleblog">
+            <label>Blog Configuration</label>
+            <tab>flexibleblog</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>Blog</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable>
+                            <label>Enable Blog</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Enable/Disable extension.</comment>
+                        </enable>
+                        <enable_jquery>
+                            <label>Enable jQuery</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If already used jQuery library in current theme then disable it. <br />i.e. Magento '<strong>rwd</strong>' default theme provides '<strong>jquery-1.10.2.min.js</strong>' file then no need to enable it.]]></comment>
+                        </enable_jquery>
+                        <blog_url>
+                            <label>Blog URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Relative to Website Base URL</comment>
+                        </blog_url>
+                        <enable_top_link>
+                            <label>Enable Top Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_top_link>
+                        <enable_footer_link>
+                            <label>Enable Footer Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_footer_link>
+                        <enable_breadcrumbs>
+                            <label>Enable Breadcrumbs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_breadcrumbs>
+                        <blog_page_layout>
+                            <label>Blog Page Layout</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_layout</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </blog_page_layout>
+                        <blog_title>
+                            <label>Blog Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </blog_title>
+                        <meta_keywords>
+                            <label>Meta Keywords</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </meta_keywords>
+                        <meta_description>
+                            <label>Meta Description</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Maximum 255 chars]]></comment>
+                        </meta_description>
+                    </fields>
+                </general>
+                <post_list translate="label">
+                    <label>Post List</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <image_size>
+                            <label>Image Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Set post image width and height as per requirement. <strong>i.e. 900x506</strong> <br>Use only width to maintain image ratio. <strong>i.e. 900</strong>]]></comment>
+                        </image_size>
+                        <character_limit>
+                            <label>Description Character Limit</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If post short description is empty then it will take from description field on listing page and you can specify character limit from here.<br> Default <strong>250</strong> character limit.]]></comment>
+                        </character_limit>
+                        <posts_per_page>
+                            <label>Posts Per Page on List Allowed Values</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Comma-separated.]]></comment>
+                        </posts_per_page>
+                    </fields>
+                </post_list>
+                <posts translate="label">
+                    <label>Post Detail</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+			<post_image_size>
+                            <label>Post Image Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Set post image width and height as per requirement. <strong>i.e. 900x506</strong> <br>Use only width to maintain image ratio. <strong>i.e. 900</strong>]]></comment>
+                        </post_image_size>
+                        <enable_social_share>
+                            <label>Social Share</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_social_share>
+                        <enable_author_info>
+                            <label>Author Info</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_author_info>
+                    </fields>
+                </posts>
+                <latest_posts_widget translate="label">
+                    <label>Latest Post Widget on Homepage</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+			<post_image_size>
+                            <label>Latest Post Image Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Set post image width and height as per requirement. <strong>i.e. 900x506</strong> <br>Use only width to maintain image ratio. <strong>i.e. 900</strong>]]></comment>
+                        </post_image_size>
+                    </fields>
+                </latest_posts_widget>
+                <sidebar translate="label">
+                    <label>Sidebar</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <search>
+                            <label>Search</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </search>
+                        <search_position>
+                            <label>Search Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_position</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><search>1</search></depends>
+                        </search_position>
+                        <categories>
+                            <label>Categories</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categories>
+			<categories_position>
+                            <label>Categories Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_position</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><categories>1</categories></depends>
+                        </categories_position>
+                        <categories_latest_number>
+                            <label>Categories Latest</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Insert value to display latest number of categories. Leave empty to display all categories.]]></comment>
+                            <depends><categories>1</categories></depends>
+                        </categories_latest_number>
+                        <archives>
+                            <label>Archives</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </archives>
+			<archives_position>
+                            <label>Archives Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_position</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><archives>1</archives></depends>
+                        </archives_position>
+                        <archives_latest_number>
+                            <label>Archives Latest</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Insert value to display latest number of archives. Leave empty to display all archives.]]></comment>
+                            <depends><archives>1</archives></depends>
+                        </archives_latest_number>
+                        <recent_posts>
+                            <label>Recent Posts</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </recent_posts>
+			<recent_posts_position>
+                            <label>Recent Posts Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_position</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><recent_posts>1</recent_posts></depends>
+                        </recent_posts_position>
+                        <recent_posts_latest_number>
+                            <label>Recent Posts Number</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Insert value to display latest number of Recent Posts. Leave empty to display Recent "5" Posts.]]></comment>
+                            <depends><recent_posts>1</recent_posts></depends>
+                        </recent_posts_latest_number>
+                        <recent_comments>
+                            <label>Recent Comments</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </recent_comments>
+			<recent_comments_position>
+                            <label>Recent Comments Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_position</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><recent_comments>1</recent_comments></depends>
+                        </recent_comments_position>
+                        <recent_comments_latest_number>
+                            <label>Recent Comments Number</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Insert value to display latest number of Recent Comments. Leave empty to display Recent "5" Comments.]]></comment>
+                            <depends><recent_comments>1</recent_comments></depends>
+                        </recent_comments_latest_number>
+                        <tag_cloud>
+                            <label>Tag Cloud</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tag_cloud>
+			<tag_cloud_position>
+                            <label>Tag Cloud Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_position</source_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><tag_cloud>1</tag_cloud></depends>
+                        </tag_cloud_position>
+                    </fields>
+                </sidebar>
+                <comments translate="label">
+                    <label>Comments</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable>
+                            <label>Enable Comments</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>flexibleblog/system_config_source_comment</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+                        <enable_disqus_username>
+                            <label>Shortname</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>2</enable></depends>
+                            <comment><![CDATA[ Registered website shortname on disqus. If you have not register with disqus click on <a href="https://disqus.com/register/" target="_blank">https://disqus.com/register</a> ]]></comment>
+
+                        </enable_disqus_username>
+                        <enable_loggedin_users>
+                            <label>Enable Comments to Logged in Users?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </enable_loggedin_users>
+			<enable_auto_approve>
+                            <label>Enable Auto Approve Comments</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </enable_auto_approve>
+                        <enable_email>
+                            <label>Enable Email Notification</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </enable_email>
+			<admin_name>
+                            <label>Admin Email Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </admin_name>
+                        <admin_email_address>
+                            <label>Admin To Email Address</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </admin_email_address>
+                        <admin_email_subject>
+                            <label>Admin Email Subject</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </admin_email_subject>
+                        <admin_email_template>
+                            <label>Admin Email Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enable>1</enable></depends>
+                        </admin_email_template>
+                    </fields>
+                </comments>
+            </groups>
+        </flexibleblog_options>
+    </sections>
+</config>

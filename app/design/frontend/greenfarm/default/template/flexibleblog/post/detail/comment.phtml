@@ -1,0 +1,33 @@
+<?php
+$post_id = $this->getRequestPostId();
+$commentCollection = $this->getCommentList($post_id);
+$level = 0; ?>
+    <div class="comment-box flexibleblog-comment-box">
+        <h3><?php echo Mage::helper('core')->__('%s Comments', $this->getCommentCount($post_id)); ?></h3>
+        <?php if($commentCollection){?>
+            <ul>
+            <?php foreach($commentCollection as $comment){?>
+                <li class="comment-<?php echo $comment->getCommentId();?>">
+                    <div class="user-comment" id="comment-<?php echo $comment->getCommentId();?>">
+                        <div class="post-by">
+                            <span><?php echo Mage::helper('core')->__('%s says :',$comment->getCommentName()); ?></span>
+                            <div class="posted-on">
+                                <?php echo Mage::helper('core')->__('%s at %s',Mage::getModel('core/date')->date('M d, Y', strtotime($comment->getCommentCreatedTime())),Mage::getModel('core/date')->date('h:i A', strtotime($comment->getCommentCreatedTime()))); ?>
+                            </div>
+                        </div>
+                        <div class="comment-description">
+                            <?php echo $comment->getCommentDescription(); ?>
+                        </div>
+                        <div class="reply-<?php echo $comment->getCommentId();?>">
+                            <a href="#" class="reply-comment" data-comment-id="<?php echo $comment->getCommentId();?>"><?php echo Mage::helper('core')->__('Reply');?></a>
+                            <a href="#" class="cancel-reply-comment" style="display:none;"><?php echo Mage::helper('core')->__('Cancel Reply');?></a>
+                        </div>
+                    </div>
+                    <?php echo Mage::getModel('flexibleblog/comment')->getCommentChild( $comment->getCommentId(), $level); ?>
+                </li>
+            <?php } ?>
+            </ul>
+        <?php }?>
+    </div>
+<?php
+echo $this->getCommentForm( $postId );

@@ -1,0 +1,136 @@
+@include bp(min-width, $bp-medium + 1) {
+  .main {
+    min-height: 300px;
+  }
+}
+
+.data-table th {
+  background: #f8f8f8;
+}
+
+.home-banner {
+  .row{
+    margin: 0;
+    > div {
+      padding: 0;
+    }
+  }
+}
+
+.home-banner-slider{
+  .slick-dots {
+    bottom: 10px;
+    li{
+      margin: 0 3px;
+    }
+    li button:before {
+      font-size: 12px;
+      color: #fff;
+      opacity: .7;
+    }
+    li.slick-active button:before {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+}
+
+.static-banner {
+  img {
+    border-left: solid 1px #fff;
+    width: 100%;
+  }
+}
+
+// list
+.product-list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  > .row{
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      margin-bottom: 30px;
+    }
+  }
+  .thumbnail {
+    img {
+      max-width: 100%;
+    }
+    .pro-tit {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 20px 0 5px;
+    }
+    a{
+      &:hover {
+        text-decoration: none;
+        .pro-tit{
+          color: $c-button;
+        }
+      }
+    }
+  }
+  .item {
+    background: white;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0 0 16px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100%;
+    padding: 15px;
+  }
+  .buttons {
+    margin-top: 30px;
+    overflow: hidden;
+    align-self: flex-end;
+    .action {
+      .button {
+        font-size: 11px;
+      }
+    }
+    .action, .add-to-links {
+      text-align: center;
+    }
+    .add-to-links {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+}
+
+.product-view {
+  .product-collateral .toggle-tabs li.current {
+    border-right: none;
+    border-left: none;
+  }
+  .toggle-tabs{
+    background: $main-color;
+    li > span {
+      color: #fff;
+    }
+  }
+  .product-collateral.tabs {
+    margin-top: 30px;
+  }
+  .more-views {
+    padding-top: 10px;
+    h2{
+      display: none;
+    }
+  }
+  .product-image, .no-touch .product-img-box .product-image:not(.zoom-available):hover {
+    border-color: #eee;
+  }
+  .swatch-label {
+    background: transparent;
+  }
+  .swatch-link, .swatch-label, .swatch-link img {
+    border-radius: 0;
+  }
+}
+
+.zoomWindow{
+  border: 1px solid $main-color !important;
+}

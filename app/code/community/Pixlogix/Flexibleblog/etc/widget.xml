@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<widgets>
+    <flexibleblog_widgetlatestpost type="flexibleblog/widgetlatestpost" translate="name description" module="flexibleblog">
+        <name>Blog: Latest Post</name>
+        <description>Allows to add latest post to any page</description>
+        <parameters>
+            <category_id>
+                <label>Blog Category ID(s)</label>
+                <visible>1</visible>
+                <type>text</type>
+                <description>Enter (,) comma seperated category IDs to access multiple categories post</description>
+            </category_id>
+            <post_limit>
+                <label>Maximum Latest Post</label>
+                <visible>1</visible>
+                <type>text</type>
+                <description>Default 5 post display</description>
+            </post_limit>
+        </parameters>
+    </flexibleblog_widgetlatestpost>
+</widgets>
