@@ -69,7 +69,7 @@ body .promos > li {
   list-style: none;
   text-align: center;
   position: relative;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #eee;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -155,8 +155,8 @@ body .promos > li {
   text-align: center;
   color: #3399CC;
   font-weight: 600;
-  border-bottom: 1px solid #CCCCCC;
-  border-top: 1px solid #CCCCCC; }
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee; }
 
 /* line 167, ../scss/content/_home.scss */
 .cms-index-noroute h2.subtitle {
@@ -187,7 +187,7 @@ body .promos > li {
   width: 23% !important;
   margin-right: 2.66667% !important;
   margin-bottom: 10px;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #eee;
   padding: 10px; }
 
 /* line 55, ../scss/content/_category.scss */

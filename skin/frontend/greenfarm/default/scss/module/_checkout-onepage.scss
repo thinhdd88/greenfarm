@@ -69,13 +69,20 @@
 
 .opc .section .step-title {
     width: 100%;
-    border-top: 1px solid $c-divider-border;
+    border-top: 1px solid #fff;
     position: relative;
     @include not-selectable;
+    background-color: $main-color;
+    padding-left: 15px;
+    margin-bottom: 4px;
 
     &:after {
         @include clearfix;
     }
+}
+
+.opc {
+    padding-top: 30px;
 }
 
 .opc .section.allow:not(.active) .step-title {
@@ -84,7 +91,7 @@
 
 /* Using .no-touch since touch devices emulate hover, thereby making steps look active that are not */
 .no-touch .opc .section.allow:not(.active) .step-title:hover {
-    background-color: $c-module-background;
+    background-color: #215286;
 }
 
 .opc .section.active .step-title {
@@ -93,6 +100,7 @@
 
 .opc .section .step-title a {
     display: none;
+    color: #FFFFFF;
 }
 
 .opc .section.allow:not(.active) .step-title a {
@@ -100,12 +108,9 @@
     float: right;
     line-height: 40px;
     height: 40px;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
-.no-touch .opc .section .step-title a:hover {
-    text-decoration: none;
-}
 
 .opc .section .step-title .number,
 .opc .section.allow.active .step-title .number,
@@ -128,12 +133,12 @@
 }
 
 .opc .section.allow .step-title h2 {
-    color: $c-text-gray;
+    color: #fff;
 }
 
 .opc .section.allow .step-title:hover h2,
 .opc .section.active .step-title h2 {
-    color: $c-text-primary;
+    color: #fff;;
 }
 
 .opc .section .step-title h2 {
@@ -143,6 +148,8 @@
     height: 40px;
     float: left;
     margin: 0px 4px 0px 45px;
+    text-transform: none;
+    color: #FFFFFF;
 }
 
 .opc .section .step {
@@ -160,10 +167,13 @@
 .opc select {
     max-width: 365px;
     width: 100%;
+    height: 30px;
+    border: 1px solid #eee;
 }
 
 .opc h3 {
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: none;
 }
 
 .opc .buttons-set {
@@ -356,8 +366,8 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
         padding-top: 6px;
         @include h4;
         margin-bottom: 6px;
-        text-transform: uppercase;
-        font-weight: normal;
+        text-transform: none;
+        font-weight: 600;
         color: $c-text-gray;
     }
 
@@ -365,9 +375,8 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
         color: $c-h4;
     }
     dd {
-        padding-left: 15px;
+        padding-left: 10px;
         margin-bottom: 10px;
-        font-family: $f-stack-serif;
         font-style: italic;
 
         address {

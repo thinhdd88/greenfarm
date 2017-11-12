@@ -47,10 +47,10 @@
 
 .data-table th {
     background: $c-table-background;
-    text-transform: uppercase;
     font-family: $f-stack-special;
     line-height: 1.4;
     white-space: nowrap;
+    font-weight: bold;
 }
 
 .data-table thead th,

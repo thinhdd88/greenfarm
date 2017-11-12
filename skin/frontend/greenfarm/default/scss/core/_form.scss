@@ -93,6 +93,7 @@ label {
     font-size: $f-size-s;
     font-family: $f-stack-special;
     font-weight: 600;
+    color: #333;
     @include not-selectable;
 }
 
@@ -161,7 +162,7 @@ textarea {
     font-size: $f-size-l;
 
     &:focus {
-        border: 1px solid $c-input-border-focus;
+        border: none;
     }
 }
 
@@ -263,7 +264,7 @@ p.required,
 .validation-advice {
     margin: 5px 0 0;
     color: $c-danger;
-    font-size: $f-size-s;
+    font-size: 12px;
 }
 
 /* ============================================ *
@@ -285,10 +286,10 @@ p.required,
         width: 74px;
     }
 
-    .field,
+    .field, .fields,
     .wide,
     .control {
-        margin-bottom: $box-spacing;
+        margin-bottom: 15px;
     }
 }
 

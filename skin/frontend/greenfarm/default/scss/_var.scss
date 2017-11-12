@@ -167,7 +167,7 @@ $c-button-subtle: #ECECEC;
 
 // Forms
 
-$c-input-border: #C0C0C0;
+$c-input-border: #eee;
 $c-input-border-focus: $c-blue;
 
 $c-input-placeholder: $c-text-gray;
@@ -194,11 +194,11 @@ $c-link-active: darken($c-action, (5% / 2));
 // Module (generic)
 
 $c-module-background: #F4F4F4;
-$c-module-background-hover: shade($c-module-background, 3%);
+$c-module-background-hover: #fafafa;
 $c-module-background-secondary: #EAF8FF;
 $c-module-background-dark: #AAAAAA;
 // This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
-$c-module-border: #CCCCCC;
+$c-module-border: #eee;
 // This should be applied whenever the border is wrapping an element with $c-module-background
 $c-module-border-light: #EDEDED;
 $c-module-border-dark: #777777;
@@ -208,7 +208,7 @@ $c-module-border-highlight: $c-blue;
 // Table
 
 $c-table-background: #F4F4F4;
-$c-table-border: #C0C0C0;
+$c-table-border: #eee;
 
 $c-table-zebra-odd: #F8F7F5;
 $c-table-zebra-even: #EEEDED;
@@ -266,4 +266,6 @@ $b-margin-bottom: 1.5em;
 
 // custom
 $main-color: #14365b;
+$bg-menu: #2c4a6c;
 $title-color: #ffb805;
+$c-title: #2c7bd1;

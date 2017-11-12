@@ -21,8 +21,17 @@
             }
         },
 
+        menuMobile: function(){
+            $('#header-nav li').each(function(){
+                $(this).on('click', function(){
+                    $(this).find('.sub-menu').toggle(300);
+                });
+            });
+        },
+
         init: function () {
             this.homeBanner();
+            this.menuMobile();
         },
     };
 

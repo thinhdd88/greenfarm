@@ -69,17 +69,16 @@
         top: 40px;
         right: 115px;
         width: 200px;
+        background: $bg-menu;
+        border: none;
+        box-shadow: 1px 1px 9px rgba(0, 0, 0, .3);
     }
 
     #header-account a {
         display: block;
         padding: 5px 10px;
-        color: $c-text;
+        color: #fff;
         line-height: 2;
-    }
-
-    #header-account a:hover {
-        color: $c-action;
     }
 
 }
@@ -95,12 +94,10 @@
 #header-account a {
     position: relative;
     display: block;
-    padding: 5px 10px;
+    padding: 5px 15px;
     line-height:23px;
-    text-align: center;
+    color: #fff;
+    font-size: 13px;
 }
 
-#header-account a:hover {
-    color: $c-action;
-}
 

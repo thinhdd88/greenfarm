@@ -54,15 +54,12 @@
         display: none;
     }
     .block-subtitle {
-        color: #50A4CF;
-        font-family: $f-stack-special;
-        font-size: 10px;
         font-weight: bold;
         line-height: 1.4;
-        padding: 5px;
+        padding: 15px 5px;
         text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 0px;
+        border-bottom: solid 1px #eee;
+        font-size: 13px;
 
         .close {
             width: 40px;
@@ -78,20 +75,40 @@
         }
     }
     .mini-products-list {
-        padding: $box-spacing;
-        padding-top: 0px;
+        padding: 0 $box-spacing;
+
+        > li {
+            border-bottom: dotted 1px #ddd;
+        }
 
         li {
-            padding: 8px 5px 8px 11px;
-            border-bottom: 1px solid #DDDDDD;
+            padding: 8px 5px 8px 0;
             position: relative;
 
+            &.item {
+                margin-bottom: 10px;
+            }
+
             &.last {
-                border: none;
+                //border: none;
             }
 
             .product-details {
                 position: relative;
+            }
+
+            .btn-edit {
+                margin-top: 2px;
+            }
+
+            .btn-edit,.remove {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 16px;
+                color: #9b9b9b;
+                margin-right: 5px;
+                position: relative;
+                z-index: 2;
             }
         }
     }
@@ -99,17 +116,24 @@
     .product-details {
         .product-name {
             padding-top: 0px;
+            margin-bottom: 0;
             font-weight: bold;
+            text-transform: none;
 
             a {
                 color: $c-action;
+                &:hover, &:focus{
+                    color: $main-color;
+                }
             }
         }
     }
 
     .info-wrapper {
-        margin-bottom: 0.5em;
-
+        margin-bottom: -20px;
+        li {
+            padding-left: 0;
+        }
         th {
             text-transform: uppercase;
             padding-right: $gap;
@@ -120,9 +144,21 @@
         }
 
         .qty-wrapper {
+            padding-bottom: 0;
+            label {
+                padding-right: 10px;
+                line-height: 32px;
+            }
+            label, p {
+                float: left;
+            }
             td {
                 height: 33px;
                 line-height: 33px;
+            }
+            .qty, .quantity-button {
+                display: inline-block;
+                vertical-align: middle;
             }
         }
 
@@ -152,13 +188,12 @@
     }
 
     .subtotal {
-        background-color: #DDDDDD;
-        text-align: center;
+        text-align: right;
         line-height: 2em;
+        padding: 0 10px;
 
         .label {
-            color: white;
-            text-transform: uppercase;
+            font-weight: bold;
         }
         .price {
             color: $c-text-primary;
@@ -167,7 +202,7 @@
 
     .minicart-actions {
         padding: $box-spacing;
-        margin-top: 0px;
+        margin-top: 15px;
         overflow: hidden;
         position: relative;
         text-align: center;
@@ -178,9 +213,10 @@
 
         .cart-link {
             height: 33px;
-            line-height: 39px;
-            text-transform: uppercase;
             font-size: $f-size-s;
+            &:hover{
+                color: $main-color;
+            }
         }
 
         .paypal-logo {
@@ -224,6 +260,7 @@
 @include bp(max-width, $bp-xsmall) {
     .header-minicart a.skip-cart {
         z-index: 1;
+        margin: 0;
     }
 }
 

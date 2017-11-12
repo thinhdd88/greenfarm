@@ -62,7 +62,7 @@ p.product-name {
     font-family: $f-stack-sans;
     font-weight: normal;
     line-height: 1.4;
-
+    text-transform: none;
     a {
         color: $c-text;
         &:hover {
@@ -399,10 +399,12 @@ $productsGridActionHeight: 85px;
 
     .product-image {
         float: left;
-        min-width: 50px;
+        width: 55px;
     }
     .product-details {
-        margin-left: 60px;
+        float: left;
+        width: 235px;
+        padding-left: 10px;
     }
 
     // Vertically center product name
@@ -411,7 +413,6 @@ $productsGridActionHeight: 85px;
     }
 
     li {
-        margin-bottom: $gap;
         clear: both;
 
         &:after {

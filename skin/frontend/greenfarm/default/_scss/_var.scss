@@ -198,7 +198,7 @@ $c-module-background-hover: shade($c-module-background, 3%);
 $c-module-background-secondary: #EAF8FF;
 $c-module-background-dark: #AAAAAA;
 // This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
-$c-module-border: #CCCCCC;
+$c-module-border: #eee;
 // This should be applied whenever the border is wrapping an element with $c-module-background
 $c-module-border-light: #EDEDED;
 $c-module-border-dark: #777777;

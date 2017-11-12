@@ -49,8 +49,8 @@
 .cart-forms .discount,
 .cart-forms .giftcard,
 .cart-forms .shipping {
-    padding: $box-spacing;
-    background-color: $c-module-background;
+    padding: 15px;
+    background-color: transparent;
     border: 1px solid $c-module-border;
 }
 
@@ -261,10 +261,14 @@
     }
 
     h2 {
-        color: $c-h2;
+        color: $c-title;
         font-size: $f-size;
         font-weight: 600;
         margin-bottom: 0;
+    }
+
+    thead th {
+        color: $c-title;
     }
 
     thead th,
@@ -321,7 +325,6 @@
     }
 
     .product-cart-sku {
-        font-family: $f-stack-serif;
         font-style: italic;
         font-size: $f-size-xs;
         margin: 5px 0 12px;
@@ -622,6 +625,7 @@
         font-size: $f-size-xs;
         font-weight: bold;
         margin: 0 0 5px;
+        color: $c-title;
     }
 
     select {
@@ -683,8 +687,7 @@
         label {
             font-family: $f-stack-special;
             font-size: $f-size-s;
-            font-weight: 400;
-            text-transform: uppercase;
+            font-weight: 600;
             white-space: nowrap;
         }
     }
@@ -758,7 +761,6 @@
         font-family: $f-stack-special;
         font-size: $f-size-xs;
         margin-bottom: 20px;
-        text-transform: uppercase;
         width: 100%;
 
         td {
@@ -775,12 +777,13 @@
         }
 
         tfoot {
-            border-top: 1px solid #E6E6E6;
-            border-bottom: 1px solid #E6E6E6;
+            border-top: 1px dotted #E6E6E6;
+            border-bottom: 1px dotted #E6E6E6;
             td {
-                font-size: 24px;
-                padding: 2px 5px;
+                font-size: 18px;
+                padding: 5px;
                 vertical-align: top;
+                font-weight: bold;
             }
 
             strong span,
@@ -832,7 +835,6 @@
         font-size: $f-size-xs;
         font-weight: 400;
         text-align: left;
-        text-transform: uppercase;
         min-width: 105px;
         display: inline-block;
         margin-right: 10px;
@@ -883,7 +885,7 @@
 
 .crosssell {
     h2 {
-        color: $c-blue;
+        color: $c-title;
     }
 
     .item a.product-image {
