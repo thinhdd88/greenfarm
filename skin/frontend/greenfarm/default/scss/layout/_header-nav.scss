@@ -78,6 +78,7 @@
         padding:  0;
         ul {
             margin: 0;
+            background: $c-link;
         }
     }
 
@@ -89,6 +90,7 @@
 
     #header-nav {
         display: block; /* Force visibility */
+        border-top: 2px solid $c-link;
     }
 
 }

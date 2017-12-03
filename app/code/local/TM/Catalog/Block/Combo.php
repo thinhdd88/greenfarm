@@ -23,4 +23,11 @@ class TM_Catalog_Block_Combo extends TM_Catalog_Block_Product_List
     public function getCurrentCategory() {
         return Mage::getModel('catalog/category')->load(TM_Data_Helper_Data::CAT_COMBO_ID);
     }
+    
+    /**
+     * @return Category Name
+     */
+    public function getCurrentCategoryName(){
+        return Mage::helper('tm_catalog/data')->getCategory(TM_Data_Helper_Data::CAT_COMBO_ID)->getName();
+    }
 }

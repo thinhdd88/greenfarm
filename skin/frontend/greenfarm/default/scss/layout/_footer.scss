@@ -35,10 +35,10 @@
     width: 100%;
     padding-top: $trim;
     padding-bottom: $box-spacing;
-    background-color: $main-color;
+    background-color: #131313;
     border-top: 1px solid $c-module-border;
     font-size: $f-size;
-    color: #fff;
+    color: #999;
 
     @include bp(max-width, $bp-xsmall) {
         padding-top: $trim-small;
@@ -96,7 +96,7 @@
 
         #newsletter-validate-detail{
             .button {
-                background-color: #2e8ab8;
+                background-color: $c-link;
                 &:hover{
                     opacity: .8;
                 }
@@ -125,13 +125,12 @@
         font-size: $f-size;
         width: 100% !important;
         li {
-            word-break: break-all;
             line-height: 1.4;
             padding: 4px 0;
         }
 
         a {
-            color: #fff;
+            color: #999;
             text-decoration: none;
             &:hover {
                 color: $color04;

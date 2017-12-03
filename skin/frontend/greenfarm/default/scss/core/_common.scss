@@ -161,9 +161,9 @@ h6, .h6 { @include h6; }
 .block-title {
     position: relative;
     padding: 10px 0 0;
-    margin-bottom: 5px;
-    border-top: 1px solid $c-module-border;
-
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: $c-link;
     h2,
     h3,
     strong {
@@ -1189,7 +1189,7 @@ a.button:hover {
 }
 
 .price-box .price {
-    color: $c-text-primary;
+    color: $c-price;
     font-size: $f-size-xl;
 }
 

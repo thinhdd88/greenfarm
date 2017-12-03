@@ -62,7 +62,7 @@
 
         li.current span,
         li:hover span {
-            color: $c-action;
+            background: rgba(0,0,0,0.1);
         }
 
         li:first-child {

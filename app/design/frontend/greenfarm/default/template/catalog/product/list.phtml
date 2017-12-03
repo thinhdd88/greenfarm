@@ -3,9 +3,12 @@
 $collection = $this->_getProductCollection();
 /** @var Mage_Catalog_Helper_Output $_helper */
 $_helper = $this->helper('catalog/output');
+/** Get Category Name */
+$categoryName = $this->getCurrentCategoryName();
 ?>
 <div class="pro-container text-center">
     <div class="pro-wrp product-list">
+        <h2 class="block-title"><?php echo $categoryName; ?></h2>
         <div class="row">
             <?php
             if ($collection->count()) {

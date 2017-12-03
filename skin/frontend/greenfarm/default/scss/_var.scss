@@ -153,9 +153,9 @@ $c-divider-border: #ECECEC;
 
 // Buttons
 
-$c-button: $c-blue;
-$c-button-hover: darken($c-blue, 5%);
-$c-button-active: darken($c-blue, 10%);
+$c-button: #ff9900;
+$c-button-hover: darken($c-button, 5%);
+$c-button-active: darken($c-button, 10%);
 
 // Secondary Buttons
 
@@ -265,7 +265,9 @@ $b-line-height: 1.5;
 $b-margin-bottom: 1.5em;
 
 // custom
-$main-color: #14365b;
+$c-link: $c-button;
+$main-color: $c-button;
 $bg-menu: #2c4a6c;
 $title-color: #ffb805;
-$c-title: #2c7bd1;
+$c-title: $c-button;
+$c-price: #f31818;
